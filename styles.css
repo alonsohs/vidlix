@@ -12,10 +12,186 @@ body {
     align-items: center;
 }
 .header__img{
-    width: 200px;
+    width: 150px;
     margin-left: 30px;
-    margin-top: 20px;
+    }
+.header__menu{
+    margin-right: 20px;
 }
+
+.header__menu ul{
+    display: none;
+    list-style: none;
+    padding: 0px;
+    position: absolute;
+    width: 100px;
+    text-align: right;
+    margin: 0px 0px 0px -15px;
+}
+
+.header__menu:hover ul, ul:hover{
+    display: block;
+}
+
+.header__menu li {
+    margin: 10px 0px;
+}    
+
+.header__menu li a{
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+.header__menu li a:hover{
+    text-decoration: underline;
+}
+.header__menu--profile{
+    margin-right: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.header__menu--profile img{
+    margin-right: 8px;
+    width: 40px;
+}
+
+.header__menu--profile p{
+    margin: 0px;
+    color: whitesmoke;
+}
+
+
+.main {
+    height: 109px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.main__title {
+    color: whitesmoke;
+    font-size: 22px;
+}
+.body__main{
+    background: linear-gradient(#015668, #111d5e);
+    padding: 0px 30px ;
+    min-height: calc(100vh - 200px);
+}
+
+.main__input{
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid white;
+    border-radius: 60px;
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 16px;
+    height: 40px;
+    padding: 0px 15px;
+    width: 70%;
+    outline: 0px;
+}
+.titulo__lista{
+    padding-left: 30px;
+    color: whitesmoke;
+    font-size: 16px;
+    border: 0px;
+    margin: 0px;
+    }
+
+.carrousel{
+    width: 100%;
+    overflow: scroll;
+    padding: 30px -10px 30px 30px;
+    position: relative;
+
+    
+}
+.carrousel__container{
+    white-space: nowrap;
+    margin: 70px 0px;
+    padding-bottom: 10px;
+}
+.carrousel-item{
+
+    width: 200px;
+    height: 250px;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-right: 10px;
+    display: inline-block;
+    cursor: pointer;
+    transition: 400ms all;
+    transform-origin: center left;
+    position: relative;
+}
+.carrousel-item:hover ~ .carrousel-item{
+    transform: translatex(100px);
+}
+
+.carrousel__container:hover .carrousel-item{
+    opacity: 0.3;
+}
+.carrousel__container:hover .carrousel-item:hover{
+    transform: scale(1.5);
+    opacity: 1;
+}
+.carrousel-item__img{
+    width: 200px;
+    height: 250px;
+    object-fit: cover;
+}
+.carrousel-item__details{
+    background: linear-gradient(to top, rgba(0,0,0,0.9) 0%,rgba(0,0,0,0) 100%);
+    font-size: 10px;
+    opacity: 0;
+    transition: 450ms opacity;
+    padding: 10px;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.carrousel-item__details--icon{
+    padding: 160px 0px 0px 10px;
+    opacity: 1;
+
+}
+.carrousel-item__details--icon img{
+    width: 30px;
+    height: 30px;
+    padding-right: 5px;
+}
+.carrousel__container:hover .carrousel-item:hover .carrousel-item__details{
+    opacity: 1;
+}
+
+.carrousel-item__details--title{
+   font-size: 15px;
+    margin: 5px 0 0 10px;
+    color: whitesmoke;
+}
+.carrousel-item__details--subtitle{
+    margin: 5px 0 0 10px;
+    color: whitesmoke;
+    font-size: 10px;
+    font-weight: lighter;
+    opacity: 0.8;
+}
+.scrollesp::-webkit-scrollbar {
+width: 0px;     /* Tamaño del scroll en vertical */
+height: 6px;    /* Tamaño del scroll en horizontal */
+
+}
+.scrollesp::-webkit-scrollbar-track {
+background:transparent;
+border-radius: 3px;
+}
+.scrollesp::-webkit-scrollbar-thumb {
+background:#ffd369;
+border-radius: 3px;
+}
+
 .login{
     background: linear-gradient(#015668, #111d5e);
     display: flex;
